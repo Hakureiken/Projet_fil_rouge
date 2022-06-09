@@ -180,7 +180,10 @@ form {
         display: flex;
 
         .information {
-            &>span {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &>div>span {
                 color: $cyan;
                 font-weight: 800;
             }
@@ -188,6 +191,20 @@ form {
             .fiable-efficace {
                 display: flex;
                 justify-content: space-between;
+
+                .efficiency {
+                    display: flex;
+
+                    &>svg {
+                        margin-right: 20px;
+                    }
+
+                    span {
+                        color:$blueNav;
+                        font-weight: bold;
+                        font-size: 1.4rem;
+                    }
+                }
             }
         }
     }

@@ -196,7 +196,13 @@ form button {
   display: flex;
 }
 
-.partners .container .information > span {
+.partners .container .information {
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+.partners .container .information > div > span {
   color: #79dcf2;
   font-weight: 800;
 }
@@ -204,6 +210,20 @@ form button {
 .partners .container .information .fiable-efficace {
   justify-content: space-between;
   display: flex;
+}
+
+.partners .container .information .fiable-efficace .efficiency {
+  display: flex;
+}
+
+.partners .container .information .fiable-efficace .efficiency > svg {
+  margin-right: 20px;
+}
+
+.partners .container .information .fiable-efficace .efficiency span {
+  color: #282f65;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .partners .littleImage {
