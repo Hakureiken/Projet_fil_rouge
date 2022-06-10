@@ -25,6 +25,18 @@ nav > div #links {
 
 nav > div #links a.active {
   color: #282f65;
+  position: relative;
+}
+
+nav > div #links a.active:before {
+  content: "";
+  width: 7px;
+  height: 4px;
+  background-color: #282f65;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 nav > div #links a {

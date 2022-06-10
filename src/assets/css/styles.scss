@@ -25,6 +25,18 @@ nav {
 
             a.active {
                 color: $blueNav;
+                position: relative;
+
+                &::before {
+                    content:"";
+                    width: 7px;
+                    height: 4px;
+                    background-color: $blueNav;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
 
             a {
