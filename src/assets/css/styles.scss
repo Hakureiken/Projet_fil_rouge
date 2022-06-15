@@ -10,8 +10,9 @@
 nav {
     display: flex;
     justify-content: space-between;
-    width: 85%;
+    width: 1237px;
     margin: auto;
+    padding-top: 25px; 
 
     &>div {
         display: flex;
@@ -33,8 +34,8 @@ nav {
                     height: 4px;
                     background-color: $blueNav;
                     position: absolute;
-                    bottom: 0;
-                    left: 50%;
+                    bottom:0;
+                    left:50%;
                     transform: translateX(-50%);
                 }
             }
@@ -60,32 +61,28 @@ nav {
     }
 
     button {
-        border: solid 1px $yellow;
-        border-radius: 5px;
-        padding: 0 17px;
-        margin-right: 15px;
-        color: $yellow;
-        background: none;
+        @include buttonYellow;
     }
 }
 
 .jumbotron {
-    height: 700px;
-    width: 85%;
+    height: 500px;
+    width: 1237px;
     margin: 15px auto 0;
     display: flex;
 
     background: url("../img/pexels-pixabay-358636_1.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 
     .title {
         width: 50%;
         padding: 100px 0 0 70px;
 
         h1 {
-            font-size: 5rem;
+            font-size: 3.8rem;
             color: white;
+            margin: 25px 0;
 
             span {
                 color: $lightBlue;
@@ -95,19 +92,111 @@ nav {
         p {
             color: white;
             font-size: 1.6rem;
+            line-height: 40px;
         }
     }
     
     .avis {
         width: 50%;
         position: relative;
+
+        .first {
+            background-color: $darkStars;
+            padding:5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translate(-70%,-100%);
+        }
+
+        .second {
+            background-color: rgba(0,0,0,.4);
+            padding:5px 20px 5px 25px;
+            border-radius: 5px;
+            position: absolute;
+            left:49%;
+            top:70%;
+            transform: translate(-55%,-50%);
+        }
+
+        img {
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        #homme_rose {
+            left: 58%;
+            top:10%;
+        }
+
+        #homme_bleu {
+            left:21.5%;
+            top:28%;
+        }
+
+        #homme_marron {
+            left: 79%;
+            top: 33%;
+            z-index: 1;
+        }
+
+        #homme_chapeau {
+            left: 29%;
+            top: 49%;
+            z-index: 1;
+        }
+
+        #homme_echarpe {
+            left: 70%;
+            top: 55%;
+        }
+
+        #femme_violette {
+            left:35.5%;
+            top: 70%;
+        }
+
+        .box {
+            position: absolute;
+            width: 299px;
+            height: 72px;
+            padding: 12px 16px;
+            border-radius: 4px;
+            background-color: rgba(0,0,0,.4);
+            color: white;
+            line-height: 25px;
+            left: 36%;
+            top: 23%;
+        }
+
+        .box1 {
+            position: relative;
+            width: 252px;
+            height: 80px;
+            padding: 16px 37px 16px 72px;
+            border-radius: 4px;
+            background-color: rgba(0,0,0,.4);
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            left: 26.5%;
+            top: 45%;
+
+            svg {
+                position: absolute;
+                left: 100%;
+                top: 50%;
+                transform: translate(-70%,-60%);
+            }
+        }
     }
 }
 
 form {
     display: flex;
     justify-content: space-evenly;
-    width: 85%;
+    width: 1237px;
     margin: auto;
     padding: 10px 0;
     background-color: white;
@@ -171,12 +260,26 @@ form {
 }
 
 .partners {
-    width: 85%;
-    margin: auto;
+    width: 1237px;
+    margin: 100px auto 0;
+    padding-bottom: 75px;
 
     h2 {
         font-size: 2rem;
         margin-bottom: 15px;
+        position: relative;
+
+        div {
+            width: 175px;
+            height: 15px;
+            background-color: $cyan;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(33%, 120%);
+            border-radius: 5px;
+            z-index: -2;
+        }
     }
 
     p {
@@ -214,7 +317,12 @@ form {
                     span {
                         color:$blueNav;
                         font-weight: bold;
-                        font-size: 1.4rem;
+                        font-size: 1.3rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        color: $grey;
                     }
                 }
             }
@@ -233,5 +341,142 @@ form {
     .information {
         padding-top: calc(331px - 271px);
 
+    }
+}
+
+.services {
+    background-color: $littleLightGray;
+    padding: 50px 0 100px 0;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .containerCard {
+        display: flex;
+        justify-content: center;
+
+        .card {
+            width: 314px;
+            height: 404px;
+            margin: 0 20px;
+            padding: 20px 10px;
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                @include buttonYellow;
+                padding: 15px 20px;
+            }
+        }
+    }
+}
+
+.estimation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 50px;
+    width: 1237px;
+    margin: 40px auto 40px;
+    background-color: $blueNav;
+
+    p {
+        color: white;
+        font-size: 1rem;
+
+        span {
+            font-size: 2.8rem;
+        }
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+
+        input {
+            padding: 12px;
+            width: 300px;
+            height: 100%;
+            border: none;
+        }
+
+        span {
+            color: white;
+            background-color: $yellow;
+            padding: 10px 25px;
+            height: 100%;
+        }
+    }
+}
+
+.avisClient {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right:7.5% ;
+    width: 100%;
+
+    .portrait {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        width: 62.5%;
+
+        img {
+            height: 400px;
+            width: 300px;
+            margin: 10px;
+            object-fit: cover;
+            object-position: center;
+            
+
+            &.active {
+                height: 500px;
+                width: 400px;
+            }
+            
+        }
+    }
+
+    .avis2 {
+        width: 37.5%;
+        padding:10px 7.5%;
+
+        span {
+            color: $cyan;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-top: 5px;
+        }
+    }
+
+    .avisTexte {
+        position: absolute;
+        width: 491px;
+        height: 315px;
+        left: 54%;
+        top: 25%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 7px 20px 10px rgba(0,0,0,0.08);
+        line-height: 25px;
+
+        &>h4 {
+            margin-bottom: 20px;
+        }
+
+        &>div>h4 {
+            margin-top: 30px;
+        }
     }
 }
